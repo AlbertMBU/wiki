@@ -1,0 +1,83 @@
+---
+title: "Apuntes Helsinki Parte 2"
+---
+
+
+
+## Problemas recurrentes y como resolverlos
+
+### Lectura de entrada del usuario
+
+El patrón de solución para las tareas de programación que involucran la lectura de la entrada del usuario es sencillo. Si el programa necesita leer del usuario, se crea una herramienta auxiliar de escáner para la tarea. El escáner se crea en el método principal después de la línea **public static void main(String[] args) {**. 
+
+Para usar el escáner, debe estar disponible en el programa a través de la declaración **import java.util.Scanner;**, que viene antes de la definición de clase **(public class ...)**. La importación de la herramienta Escáner la hace disponible para su uso en el programa.
+
+```java
+// Making the scanner available in the program
+import java.util.Scanner;
+
+public class Program {
+    public static void main(String[] main) {
+        // Creating the scanner
+        Scanner reader = new Scanner(System.in);
+
+        // Examples of reading different types of user input
+        String text = reader.nextLine();
+        int number = Integer.valueOf(reader.nextLine());
+        double numberWithDecimals = Double.valueOf(reader.nextLine());
+        boolean trueOrFalse = Boolean.valueOf(reader.nextLine());
+
+    }
+}
+```
+
+### Calculando
+
+Muy a menudo necesitamos calcular algo en un programa, como un promedio o una suma. El patrón de solución para resolver tales problemas es el siguiente.
+
+1. Defina las entradas requeridas para el cálculo y declare variables para ellas. La entrada se refiere a los valores utilizados en el cálculo. Por lo general, puede identificar el tipo de entradas a partir de la descripción del problema.  
+2. Identifique la operación necesaria y declare una variable para el resultado del cálculo. Realice el cálculo utilizando las entradas y asigne el resultado a la variable que se reservó para ello. El tipo de resultado también se puede identificar normalmente a partir de la descripción del problema.  
+3. Una vez hecho el cálculo, haz algo con su resultado. Esto puede significar imprimir el resultado de un cálculo o, por ejemplo, usarlo para calcular un promedio dividiendo la suma de las entradas por su cuenta.
+
+Por ejemplo, el patrón de solución para el problema Crear un programa para calcular la suma de dos números enteros es el siguiente.
+```java
+// Identifying the input values and declaring the variables for them
+int first = 1;
+int second = 2;
+
+// Identifying the operation and declaring a variable for the result
+int sum = first + second;
+
+// printing the result of the calculation
+System.out.println("The sum of " + first + " and " + second + " is " + sum);
+```
+
+Un programa que lee y calcula combina ambos patrones. Uno que calcula el producto de dos números enteros proporcionados por el usuario se ve así:
+
+```java
+// Making the scanner available in the program
+import java.util.Scanner;
+
+public class Program {
+    public static void main(String[] main) {
+        // Creating the scanner
+        Scanner reader = new Scanner(System.in);
+
+        // Identifying the input values and declaring the variables for them
+        int first = 1;
+        int second = 2;
+
+        // Assigning the user input to the variables
+        first = Integer.valueOf(reader.nextLine());
+        second = Integer.valueOf(reader.nextLine());
+
+        // Identifying the operation and declaring a variable for the result
+        int product = first * second;
+
+        // Printing the result of the operation
+        System.out.println("The product of " + first + " and " + second + " is " + product);
+
+    }
+}
+```
+
