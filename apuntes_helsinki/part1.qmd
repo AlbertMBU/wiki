@@ -1,0 +1,790 @@
+---
+title: "Apuntes Helsinki Parte 1"
+---
+
+Se escribe en código fuente
+
+Consta de sentencias y expresiones que se leen por línea de arriba a abajo y de izquierda a derecha.
+
+Ej: para escribir en pantalla 'hola mundo' se debe usar el comando 
+
+System.out.println() en el que el texto introducido entre paréntesis será el que mostrará
+
+```java
+System.out.println("Hello World");
+```
+
+Se debe finalizar la línea de comando con ; 
+
+En Java, nuestros programas deben incluir algún código repetitivo para funcionar. Este modelo, cuyo ejemplo se muestra a continuación, le dice a la computadora cómo se llama su programa. A continuación, el nombre del programa es Example. Este nombre tiene que corresponder al nombre del archivo que contiene el código fuente (por ejemplo, Example.java).
+
+```java
+public class Example {
+    public static void main(String[] args) {
+
+        System.out.println("Text to be printed");
+
+    }
+}
+```
+
+  
+La ejecución del programa comienza desde la línea que sigue a **public static void main(string[] args) {, y termina en el corchete de cierre }.** 
+Los comandos se ejecutan una línea a la vez.  
+En el ejemplo anterior, **System.out.println('Text to printed')** es el único comando que se ejecutará. Su salida es:
+
+Text to be printed
+
+En el ejemplo el nombre del programa es *Example* este nombre corresponde al nombre del archivo que contiene el código fuente (Ej: Example.java)
+
+La ejecución del programa empieza después de **public static void main(sting[] args) {** y termina en el corchete de cierre **}**
+
+ Ya que el programa se ejecuta línea por línea, cada vez que se le quiera dar una instrucción (aunque sea para que lo muestre en pantalla) se debe crear una línea de código cada vez y al finalizar esta línea añadir **;**
+Ej:
+```java
+public class Ohjelma {
+    public static void main(String[] args) {
+        System.out.println("Hello world!");
+        System.out.println("... and the universe!");
+    }
+}
+```
+
+este comando arroja lo siguiente: 
+Hello world! 
+... and the universe!
+
+### Autocompletar
+
+en Netbeans nos permite completar sentencias con el tabulador Ej: 
+
+"sout" +Tab = escribe *System.out.println("");*
+
+se podría escribir varios comandos en una sola línea separándolos por **;** pero no es aconsejable ya que dificulta su consulta en el futuro  
+
+
+
+
+### El código se puede comentar
+
+hay 2 maneras de poder comentar o anotar instrucciones (solo visibles en pantalla) una parte del código:
+
+1 línea: con dos barras // todo lo que siga estas barras se interpreta como un comentario.
+
+Multi-línea: se marcan con /* al inicio y se cierra con \*/  todo lo que incluye dentro, queda reflejado como comentario.
+
+
+
+
+### Entrada texto por usuarios y leído por el programa
+
+El programa lee las entradas por STRINGS (cadenas), para que java entienda el texto introducido por el usuario, se utiliza el comando import java.util.Scanner; antes del nombre del programa
+
+```java
+import java.util.Scanner;
+```
+
+
+Ejemplo:
+
+```java
+// Introduce the scanner tool used for reading user input
+import java.util.Scanner;
+
+public class Program {
+
+    public static void main(String[] args) {
+        // Create a tool for reading user input and name it scanner
+        Scanner scanner = new Scanner(System.in);
+
+        // Print "Write a message: "
+        System.out.println("Write a message: ");
+
+        // Read the string written by the user, and assign it
+        // to program memory "String message = (string that was given as input)"
+        String message = scanner.nextLine();
+
+        // Print the message written by the user
+        System.out.println(message);
+    }
+}
+```
+
+
+
+
+## Strings (cadenas)
+
+El termino STRINGS (cadenas) es una abreviatura de cadena de caracteres 
+
+Hemos usado cadenas de dos maneras:
+
+1. Al practicar el comando de impresión, pasamos la cadena que se imprimirá al comando de impresión entre comillas, y 
+2. al practicar la lectura de entrada, guardamos la cadena que leímos en una variable.
+
+En la practica las variables son contenedores con nombre que contienen información de algún tipo especifico y tiene un nombre.
+
+Una variable de cadena se define indicando el tipo de variable (String) y su nombre (myString)
+
+A dicha variable también se le puede asignar un valor cuando se define. (_Puedes asignar un valor siguiendo la declaración con signo igual seguido del valor y punto y coma_)
+
+Ej: un string variable llamada message a la que se le asigna el valor 'Hola Mundo!' se escribe así:
+
+```java
+String message = "Hello world!";
+```
+
+Cuando se crea una variable, se genera un contenedor especifico dentro del programa, cuyo contenido se puede consultar mas adelante. Las variables de referencian por su nombre.
+Por ejemplo, la creación e impresión de una variable String se realiza asi:
+
+```java
+String message = "Hello world!";
+System.out.println(message);
+```
+
+Y daría el resultado:
+"Hello world!"
+
+Un String entre comillas en programación se denomina "STRING LITERAL", que define una variable (texto) literal, así que si ponemos comillas alrededor del string, este nos devuelve el texto añadido entre las comillas
+
+```java
+String message = "Hello world!";
+System.out.println("message");
+```
+
+Ejemplo de salida: 
+
+<span style="color:green">message</span>
+
+
+### Concatenar (unir Strings)
+
+El string que se va a imprimir se puede crear a partir de varios strings utilizando *+* 
+
+Por ejemplo:
+
+```java
+public class Program {
+
+    public static void main(String[] args) {
+        System.out.println("Hello " + "world!");
+    }
+}
+```
+
+Se puede usar el mismo método para unir un string literal y una variable de string:
+
+```java
+public class Program {
+
+    public static void main(String[] args) {
+        String message = "Hello world!";
+
+        System.out.println(message + " ... and the universe!");
+    }
+}
+```
+Que daría como resultado:
+
+*Hello world!... and the universe!*
+
+Podemos hacer lo mismo con cualquier número de strings:
+
+```java
+public class Program {
+
+    public static void main(String[] args) {
+        String start = "My name is ";
+        String end = ", James Bond";
+
+        System.out.println(start + "Bond" + end);
+    }
+}
+```
+
+Que dará como resultado:
+
+My name is Bond, James Bond
+
+
+
+
+
+### Leyendo Strings
+El comando `reader.nextLine();` lee la entrada de un usuario y devuelve un string. Si la queremos volver a usar en el programa debemos usar la variable — `String message = scanner.nextLine();` El valor guardado en el string se puede usar tantas veces como se quiera.
+En el siguiente ejemplo la entrada del usuario se repite dos veces:
+
+```java
+//Introduce the Scanner tool used for reading
+import java.util.Scanner;
+
+public class Program {
+
+    public static void main(String[] args) {
+
+        //Create the tool for reading, assign it to variable caller "scanner
+        Scanner scanner = new Scanner(System.in);
+
+        //Print user a message "Write a message: "
+        System.out.println("Write a message: ");
+
+        //Read the user's string input, save it to program memory
+        //"String message = (user input)"
+        String message = scanner.nextLine();
+
+        // Print the user input twice
+        System.out.println(message);
+        System.out.println(message);
+    }
+}
+```
+
+#### Espera de una entrada
+Cuando el programa ejecutado solicita una entrada del usuario con el comando (the command `reader.nextLine()`), la ejecución se para y espera a que el usuario escriba y presione enter.
+
+
+
+
+## Crear saltos de línea
+
+Para crear saltos de línea visuales en pantalla dentro del texto escrito  en \"" se debe añadir \\n 
+
+Si solo se desea ver el código en nuestro editor, para no tener que hacer scroll se puede usar la barra invertida: **\\**
+
+## Variables 
+
+Se puede interpretar una variable como un contenedor en que se puede almacenar información.
+Hay varios tipos de variables:
+	1. Texto (String)
+	2. Números enteros (int)
+	3. Coma flotante-decimales (double)
+	4. Verdadero o falso (boolean)
+
+*Se asigna un valor a la variable usando el símbolo igual _=_*
+
+Ej: 
+```java
+int months = 12;
+```
+
+En el ejemplo anterior el valor 12 se le asigna a una variable entera denominada meses. **Podría leerse como: a la variable meses se le asigna el valor 12**
+
+El valor de una variable se puede unir a una cadena usando el signo **+** como en el siguiente ejemplo:
+
+```java
+String text = "contains text";
+int wholeNumber = 123;
+double floatingPoint = 3.141592653;
+boolean trueOrFalse = true;
+
+System.out.println("Text variable: " + text);
+System.out.println("Integer variable: " + wholeNumber);
+System.out.println("Floating-point variable: " + floatingPoint);
+System.out.println("Boolean: " + trueOrFalse);
+```
+
+*Da la siguiente salida:*
+
+Text variable: contains text 
+Integer variable: 123 
+Floating-point variable: 3.141592653 
+Boolean: true
+
+
+**El nombre de las variables no se puede repetir**
+
+En caso de que se repitieran 2 variables con el mismo nombre, siempre haría caso a la primera.
+
+La variable siempre conservará el mismo valor hasta que se le asigne otro.
+
+Se puede cambiar el valor mediante la declaración que tenga el mismo  nombre de la variable, un signo igual y el nuevo valor. (el tipo de variable solo se puede definir en la declaración inicial, a tener en cuenta que el tipo de variable solo se podrá definir cuando se crea la primera vez)
+Ej:
+```java
+int number = 123;
+System.out.println("The value of the variable is " + number);
+
+number = 42;
+System.out.println("The value of the variable is " + number);
+```
+
+Salida ejemplo:
+
+The value of the variable is 123 
+The value of the variable is 42
+
+Veamos paso a paso la ejecución del programa anterior. Cuando una variable aparece en el programa por primera vez, es decir, se le dice a la computadora tanto su tipo (en este caso, int) como su nombre (en este caso, número), la computadora crea un 'contenedor con nombre' para la variable. Luego, el valor del lado derecho del signo igual se copia en este contenedor con nombre.
+
+![[Pasted image 20221103134856.png]]
+
+Cada vez que se hace referencia a una variable por su nombre en un programa - aquí, queremos imprimir la cadena "El valor de la variable es"  seguido del valor de la variable numérica, su valor se recupera de un contenedor que tiene el nombre correspondiente.
+
+![[Pasted image 20230103122510.png]]
+
+Cada vez que se asigna un valor a una variable (aquí el number = 42), se ejecuta una verificación para ver si ya existe un contenedor con el nombre dado. Si ya existe, se copia un nuevo valor en el lugar del valor anterior, y el valor anterior desaparece. Si no se encuentra un contenedor del nombre de la variable, la ejecución del programa finaliza con un mensaje de error o no se ejecuta.
+
+![[Pasted image 20230103122643.png]]
+
+Luego, se vuelve a hacer referencia a la variable por su nombre en el programa; nuevamente queremos imprimir la cadena 'El valor de la variable es' seguido del valor de la variable numérica. Procedemos normalmente, recuperando el valor de número de un contenedor que tiene su nombre.
+
+![[Pasted image 20230103122752.png]]
+
+Al final del programa, notará que el valor inicial de la variable ha sido eliminado . **Una variable puede contener sólo un valor a la vez.**
+
+
+### Tipos de variable persistentes
+
+Una vez se ha declarado el tipo de variable, ya no se puede cambiar. Por ejemplo, no se puede asignar un valor booleano a una variable tipo entero, ni se puede asignar un valor entero a una variable tipo booleana.
+
+Sin embargo, existen excepciones: Se puede asignar un numero entero a una variable tipo doble, ya que Java sabe como convertir un numero entero a doble durante la asignación del valor.
+
+```java
+double floatingPoint = 0.42;
+floatingPoint = 1; // FUNCIONA
+
+int value = 10;
+floatingPoint = value; // TAMBIÉN FUNCIONA
+```
+
+**Sin embargo no se puede asignar un valor decimal a una variable entera.**
+
+### Nombrar Variables
+
+Nombrar variables es un aspecto fundamental en la descripción de un programa. Veamos dos ejemplos.
+
+```java
+double a = 3.14;
+double b = 22.0;
+double c = a * b * b;
+
+System.out.println(c);
+```
+
+Salida = 1519.76
+
+```java
+double pi = 3.14;
+double radius = 22.0;
+double surfaceArea = pi * radius * radius;
+
+System.out.println(surfaceArea);
+```
+
+Salida = 1519.76
+
+ℹ️
+<span style="color:red">**Las variables expresan el programa y el problema a resolver**</span>
+
+Es decir el nombre de las variables deben ayudar a comprender el problema y su resolución para futuras modificaciones o entender correctamente lo que se pretende conseguir.
+
+El nombre de las variables está limitada por ciertas restricciones:
+
+- No puede contener símbolos especiales (@, !, #, etc).
+- No puede contener espacios (se utilizan para separar comandos)
+- No puede empezar por un numero, pero lo puede contener
+- No se puede llamar igual que las variables definidas por java o comandos de Java
+
+Las normas que usa el estilo Java se conoce como estilo [camelCase](https://en.wikipedia.org/wiki/Camel_case "Camel case – Wikipedia"). 
+
+**Nota!** La primera letra de la variable debe ser minúscula.
+
+Las variables informan de los valores que contienen:
+
+Una variable que contiene la cadena 'texto' se declara con la sentencia *String string = 'texto';* y un entero que tiene el valor 42 se declara con la sentencia *int value = 42;*
+  
+El tipo de una variable determina los tipos de valores que se le pueden asignar:
+
+Tipo int: números enteros
+Tipo double: números con decimales
+Tipo booleano: valor verdadero/falso
+
+
+| Tipo | Ejemplo | Valores aceptados |
+| ---------- | ---------- | ---------- |
+| Numero Entero (int)   |  int valor = 4;   | Un numero entero puede contener enteros con valor entre -2147483648 and 2147483647. |
+| Numero Decimal (double)   | double valor = 4.2;   | Los números de punto flotante contienen números decimales, siendo el mayor valor posible aproximadamente 2^1023 |
+| String (Cadena texto)  |  String texto = "Hola";   | Un String puede contener texto **Este debe estar entre \" \"** |
+| Verdadero/Falso (booleano)  | boolean right = true;   | Un booleano contiene el valor verdadero o falso |
+
+
+
+## Reading Different Variable Types from User (leyendo diferentes variables escritas por el usuario)
+
+La entrada del usuario siempre se lee como un string, ya que su el usuario escribe su entrada como texto.
+
+nextLine se usa para leer el string del usuario, es el comando que ayuda al Scanner.
+
+```java
+String text = scanner.nextLine();
+```
+
+El comando Integer.valueOf convierte un string en un entero.
+
+El comando Double.valueOf convierte una cadena en un doble (número decimal). Toma como parámetro la cadena que contiene el valor a convertir
+
+El comando Boolean.valueOf convierte una cadena en un booleano.
+
+```java
+import java.util.Scanner;
+
+public class Program {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        String text = scanner.nextLine();
+        int integer = Integer.valueOf(scanner.nextLine());
+        double floatingPoint = Double.valueOf(scanner.nextLine());
+        boolean trueOrFalse = Boolean.valueOf(scanner.nextLine());
+
+        // and so on
+    }
+}
+```
+
+## Calculando con números
+
+las funciones matemáticas funcionan igual que habitualmente.
+
+A tener en cuenta que las operaciones de MULTIPLICAR Y DIVIDIR se calculan **antes** que las de SUMAR Y RESTAR.
+
+puedes modificar el orden de las operaciones utilizando paréntesis, las operaciones entre paréntesis se realizaran antes que las que estan fuera de ellos
+
+#### ESCRIBIR VALOR DE LAS VARIABLES
+para imprimir el valor de las variables en pantalla debe ir ***+ variable***
+
+Ej:
+```java
+System.out.println( + first + " * " + second + " = "+ (first * second));
+
+SALIDA : 2 * 8 = 16 
+```
+
+Al dividir, si se dividen 2 números enteros y el resultado es con decimales, dará como resultado un NUMERO ENTERO.
+
+para imprimir un resultado con decimales se deben convertir las variables y el resultado en decimal (double), en el caso de una de las variables sea con decimales esta convierte el resultado en decimal.
+Ej: 
+```java
+int first = 3;
+int second = 2;
+
+double result1 = (double) first / second;
+System.out.println(result1); // prints 1.5
+
+double result2 = first / (double) second;
+System.out.println(result2); // prints 1.5
+
+double result3 = (double) (first / second);
+System.out.println(result3); // prints 1.0
+```
+
+Otra opción es multiplicar una de las variables por un decimal antes de la operación 
+
+```java
+int dividend = 3;
+int divisor = 2;
+
+double result = 1.0 * dividend / divisor;
+System.out.println(result); // imprime 1.5
+```
+
+### Declaración condicional if
+
+tiene una condición al ejecutarse, se declara con la palabra **if** seguida de \(\). Después se define el condicional dentro de unos corchetes \{\}, los datos de los paréntesis se ejecutan si cumplen la opción verdadero.
+
+Ej: nos devuelve la frase el número es mayor que 10, ya que el valor de la variable es 11
+
+```java
+int number = 11;
+if (number > 10) {
+    System.out.println("The number was greater than 10");
+}
+```
+
+En caso de que la expresión condicional fuera verdadera, la ejecución del programa continua, en caso de que sea falso, el programa pasa a la siguiente a la siguiente declaración después del corchete.
+*if no va seguida de ; ya que la declaración no termina después del condicional*.
+
+### Sangría de código y sentencias de bloque
+
+Code Indentation
+
+Un bloque de código se refiere a una sección encerrada por un par de corchetes \{\}. 
+
+El archivo fuente contiene el programa y el string *public class*, seguido del nombre del programa. El bloque se cierra al finalizar con el corchete de cierre \}
+
+![[Pasted image 20230117134639.png]]
+
+*Ojo una declaración condicional también marca el comienzo de un nuevo bloque de código*
+
+El código en Java tiene una sangría de cuatro espacios o una sola pestaña para cada bloque **(se puede identar con Tabulador)**. Use espacios o tabulaciones para la sangría, no ambos. La sangría puede romperse en algunos casos si usa ambos al mismo tiempo. NetBeans lo ayudará con esto si presiona la combinación de teclas 'alt + shift + f' (macOS 'control + shift + f').
+
+*IDENTADO AUTOMATICO EN NETBEANS 'alt + shit +f'*
+
+
+## Comparison Operators (Operadores)
+
+-   \> mayor que
+-   \>\= mayor o igual que
+-   \< menor que
+-   \<\= menor o igual que
+-   \=\= igual que
+-   \!\= NO igual que
+
+## Else
+
+Si la ejecución de if dentro de los paréntesis se evalúa como falsa, entonces la ejecución del código se mueve a la siguiente declaración del corchete de cierre. 
+
+Esto no siempre se desea, si queremos crear una opción alternativa cuando esta sea falsa se usa el parámetro **ELSE**, este parámetro se usa siempre con **IF**
+```java
+int number = 4;
+
+if (number > 5) {
+    System.out.println("Your number is greater than five!");
+} else {
+    System.out.println("Your number is five or less!");
+}
+
+// valor de salida
+
+Your number is five or less!
+```
+
+*El comando else se coloca en la misma línea que el paréntesis de cierre del bloque definido por el comando if.*
+
+### Más condicionales: else if
+
+En el caso de múltiples condicionales, usamos el comando **else if**.
+El comando **else** *if* es como else, pero con una _condición adicional_. else if sigue la condición if, y pueden ser múltiples.
+
+```java
+int number = 3;
+
+if (number == 1) {
+    System.out.println("The number is one");
+} else if (number == 2) {
+    System.out.println("The given number is two");
+} else if (number == 3) {
+    System.out.println("The number must be three!");
+} else {
+    System.out.println("Something else!");
+}
+
+//SALIDA = 
+
+The number must be three!
+
+```
+
+**OJO** *Cuando cumple una de las condiciones deja de ejecutar los condicionales, aunque los posteriores son verdaderos*
+
+
+### Expresión de declaración condicional y la variable booleana
+
+El valor que va entre paréntesis de la declaración condicional debe ser de tipo booleano después de la evaluación. Las variables de tipo booleano son verdaderas o falsas.
+
+```java
+boolean isItTrue = true;
+System.out.println("The value of the boolean variable is " + isItTrue);
+
+// SALIDA: 
+
+The value of the boolean variable is true
+
+```
+
+  
+La declaración condicional también se puede hacer de la siguiente manera:
+
+```java
+boolean isItTrue = true;
+if (isItTrue) {
+    System.out.println("Pretty wild!");
+}
+
+//SALIDA:
+
+Pretty wild!
+```
+
+Los operadores de comparación también se pueden usar fuera de los condicionales. En esos casos, el valor booleano resultante de la comparación se almacena en una variable booleana para su uso posterior.
+
+```java
+int first = 1;
+int second = 3;
+boolean isGreater = first > second;
+```
+
+En el ejemplo anterior, la variable booleana isGreater ahora contiene el valor booleano falso. Podemos extender el ejemplo anterior agregándole una declaración condicional.
+
+```java
+int first = 1;
+int second = 3;
+boolean isLessThan = first < second;
+
+if (isLessThan) {
+    System.out.println("1 is less than 3!");
+}
+```
+
+El operador módulo es un operador ligeramente menos utilizado, que es, sin embargo, muy útil cuando queremos comprobar la divisibilidad de un número, por ejemplo. El símbolo del operador módulo es %.
+
+```java
+int remainder = 7 % 2;
+System.out.println(remainder); // prints 1
+System.out.println(5 % 3); // prints 2
+System.out.println(7 % 4); // prints 3
+System.out.println(8 % 4); // prints 0
+System.out.println(1 % 2); // prints 1
+```
+
+### Declaraciones condicionales y cadenas de comparación (Comparing String)
+
+para comparar variables tipo integers, floating point numbers, y booleanos podemos usar dos símbolos igual (`variable1 == variable2`), pero no podemos comparar así las variables string.
+
+Para compara strings debemos usar el comando **equals**
+
+Ej:
+
+```java
+Scanner reader = new Scanner(System.in);
+
+System.out.println("Enter a string");
+String input = reader.nextLine();
+
+if (input.equals("a string")) {
+    System.out.println("Great! You read the instructions correctly.");
+} else {
+    System.out.println("Missed the mark!");
+}
+/*SALIDA 1:
+
+Enter a string 
+ok!
+Missed the mark!
+
+SALIDA 2:
+
+Enter a string 
+a string
+Great! You read the instructions correctly.
+
+```
+
+El comando equals se escribe después de una cadena al adjuntarlo a la cadena para compararlo con un punto. El comando recibe un parámetro, que es la cadena con la que se comparará la variable. Si la variable de cadena se compara directamente con una cadena, entonces la cadena se puede colocar entre paréntesis del comando igual entre comillas. De lo contrario, el nombre de la variable de cadena que contiene la cadena que se va a comparar se coloca entre paréntesis.
+
+En el siguiente ejemplo, se solicita al usuario dos cadenas. Primero comprobamos si las cadenas proporcionadas son las mismas, después de lo cual comprobaremos si el valor de cualquiera de las dos cadenas es 'dos cadenas'.
+
+```java
+Scanner reader = new Scanner(System.in);
+
+System.out.println("Input two strings");
+String first = reader.nextLine();
+String second = reader.nextLine();
+
+if (first.equals(second)) {
+    System.out.println("The strings were the same!");
+} else {
+    System.out.println("The strings were different!");
+}
+
+if (first.equals("two strings")) {
+    System.out.println("Clever!");
+}
+
+if (second.equals("two strings")) {
+    System.out.println("Sneaky!");
+}
+
+/*SALIDA 1:
+Input two strings 
+**hello** 
+**world** 
+The strings were different!
+
+SALIDA 2:
+
+Input two strings 
+**two strings** 
+**world** 
+The strings were different! Clever!
+
+SALIDA 3:
+Input two strings 
+**same** 
+**same** 
+The strings were the same!
+
+*/
+
+```
+
+### Operadores Lógicos (Logical Operators)
+
+&& and (y)
+|| or (ó)
+! not (no)
+
+En función de la combinación de las expresiones dará un resultado u otro dependiendo del operador.
+
+#### TABLAS DE VERDAD
+
+
+![[Pasted image 20230118115733.png]]
+
+![[Pasted image 20230118115835.png]]
+
+
+Ej:
+En el siguiente ejemplo, combinamos dos condiciones individuales usando &&, es decir, el operador and. El código se usa para verificar si el número en la variable es mayor o igual a 5 y menor o igual a 10. En otras palabras, si está dentro del rango de 5-10:
+
+```java
+System.out.println("Is the number within the range 5-10: ");
+int number = 7;
+
+if (number >= 5 && number <= 10) {
+    System.out.println("It is! :)");
+} else {
+    System.out.println("It is not :(")
+}
+
+//SALIDA:
+
+Is the number within the range 5-10: 
+It is! :)
+
+```
+
+En el siguiente proporcionamos dos condiciones usando ||, es decir, el operador or: es el número menor que cero o mayor que 100. La condición se cumple si el número cumple cualquiera de las dos condiciones:
+
+```java
+System.out.println("Is the number less than 0 or greater than 100");
+int number = 145;
+
+if (number < 0 || number > 100) {
+    System.out.println("It is! :)");
+} else {
+    System.out.println("It is not :(")
+}
+
+/*SALIDA:
+Is the number less than 0 or greater than 100 
+It is! :)
+*/
+
+```
+
+  
+En este ejemplo, volteamos el resultado de la expresión number > 4 usando **!**, es decir, el operador *NOT*. El operador NOT se escribe de tal manera que la expresión que se va a voltear se encierra entre paréntesis y el operador *NOT* se coloca antes de los paréntesis.
+
+```java
+int number = 7;
+
+if (!(number > 4)) {
+    System.out.println("The number is not greater than 4.");
+} else {
+    System.out.println("The number is greater than 4.")
+}
+
+/*SALIDA:
+
+The number is greater than 4.
+*/
+
+```
