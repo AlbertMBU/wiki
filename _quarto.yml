@@ -4,10 +4,35 @@ project:
 website:
   title: "Albert MBUA"
   navbar:
-    left:
-      - href: index.qmd
-        text: Home
-      - about.qmd
+    background: secondary
+    style: "floating"
+    search: true
+    right:
+      - text: Home
+        file: index.qmd
+      - text: About
+        file: about.qmd
+      - sidebar:apuntes_helsinki
+      - sidebar:devops
+
+    sidebar:
+      - id: "apuntes_helsinki"
+        title: "apuntes_helsinki" 
+        border: true
+        collapse-level: 1
+        background: none
+        style: "floating"
+        contents: 
+          - text: "apuntes_helsinki"
+          - text: "---"  
+          - section: "apuntes_helsinki: "
+            contents: 
+              - apuntes_helsinki/part1.qmd
+              - apuntes_helsinki/part2.qmd
+            
+
+
+
 
 format:
   html:
