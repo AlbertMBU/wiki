@@ -15,24 +15,26 @@ website:
       - sidebar:apuntes_helsinki
       - sidebar:devops
 
-    sidebar:
-      - id: "apuntes_helsinki"
-        title: "apuntes_helsinki" 
-        border: true
-        collapse-level: 1
-        background: none
-        style: "floating"
-        contents: 
-          - text: "apuntes_helsinki"
-          - text: "---"  
-          - section: "apuntes_helsinki: "
-            contents: 
-              - apuntes_helsinki/part1.qmd
-              - apuntes_helsinki/part2.qmd
-            
-
-
-
+  sidebar:
+    - id: "apuntes_helsinki"
+      title: "Apuntes Helsinki" 
+      border: true
+      collapse-level: 1
+      background: none
+      style: "floating"
+      contents: 
+        - text: "apuntes_helsinki ...."
+        - text: "---"  
+        - section: "apuntes_helsinki: "
+          contents: 
+            - apuntes_helsinki/part1.qmd
+            - apuntes_helsinki/part2.qmd
+        - text: "apuntes_helsinki mmm"
+        - text: "---"  
+        - section: "apuntes_helsinki: "
+          contents: 
+            - apuntes_helsinki/part1.qmd
+            - apuntes_helsinki/part2.qmd
 
 format:
   html:
