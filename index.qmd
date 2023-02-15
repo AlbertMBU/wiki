@@ -7,3 +7,5 @@ title: "wiki"
 This is a Quarto website.
 
 To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+
+Hola, esta mi carta de presentación para el curso de Quarto. Espero que les guste.
