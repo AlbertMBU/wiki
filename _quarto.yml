@@ -12,8 +12,12 @@ website:
         file: index.qmd
       - text: About
         file: about.qmd
-      - sidebar:apuntes_helsinki
-      - sidebar:devops
+      - text: Apuntes Helsinki
+        file: apuntes_helsinki/part1.qmd
+              apuntes_helsinki/part2.qmd
+      - text: Definiciones
+        file: Definitions/definitions.qmd
+      
 
   sidebar:
     - id: "apuntes_helsinki"
@@ -23,18 +27,23 @@ website:
       background: none
       style: "floating"
       contents: 
-        - text: "apuntes_helsinki ...."
         - text: "---"  
-        - section: "apuntes_helsinki: "
+        - section: "Apuntes Helsinki: "
           contents: 
             - apuntes_helsinki/part1.qmd
             - apuntes_helsinki/part2.qmd
-        - text: "apuntes_helsinki mmm"
         - text: "---"  
-        - section: "apuntes_helsinki: "
+    - id: "definitions"
+      title: "Definiciones"
+      border: true
+      collapse-level: 1
+      background: none
+      style: "floating"
+      contents: 
+        - text: "---"   
+        - section: "Definiciones: "
           contents: 
-            - apuntes_helsinki/part1.qmd
-            - apuntes_helsinki/part2.qmd
+            - Definitions/definitions.qmd
 
 format:
   html:

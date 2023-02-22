@@ -1,0 +1,101 @@
+DEVOPS: conjunto de herramientas, procesos de trabajo, buenas prácticas y mentalidades donde impera la eficiencia, la productividad, la automatización de un proyecto y su ciclo de vida, así como sus posibles fallos para conseguir una mejor versión a traves de varias iteraciones con el código.
+
+FRAMEWORK: Conjunto de herramientas orientas a ejecutar un software en concreto
+
+API: Application Programming Interface, (interfaz de programación de aplicaciones), conjunto de estructuras que permiten que los componentes de un SW se comuniquen con otros. Permite el acceso a desarrolladores de otros programas a ciertas partes de su biblioteca para llevar a cabo determinadas acciones. La capacidad que tiene un software para comunicar
+
+BASH
+Terminal para ejecutar programas en linux
+
+CRUD:
+
+IMMUTABLE CODE:
+
+GIT/GITHUB:
+
+SERVERLESS:
+
+CD/CI:
+
+PIPE (Tubería)
+Herramienta que nos permite cocatenar entradas y salidas, tomando como referencia el resultado anterior (el resultado 2, toma como inicio el resultado 1)
+
+PIPELINE:
+Conjunto de pipes para organizar el flujo de información.
+
+CONTAINER:
+
+DOCKER IMAGE:
+
+DOCKER CONTAINER:
+
+MICROSERVICES:
+
+SCRIPT:
+
+TRIGGER: dispara una acción
+
+API REST: interfície
+
+WEB HOOK:
+
+THROTTLE:
+
+PARSE: Poner la misma información en diferentes formatos (lenguajes)
+
+POLLING
+
+RUTA ABSOLUTA: Es la ruta completa desde la raíz del sistema operativo. Suele empezar por c:\ _Ej: C:\ProgramData\Adobe\Acrobat\10.0\Replicate\Security
+
+RUTA RELATIVA: Es la ruta desde donde "estamos" hasta el archivo. _Ej: si estamos en la carpeta Adobe del ejemplo anterior, sería: Adobe\Acrobat\10.0\Replicate\Security
+
+METODO: Bloque de código que contiene una serie de instrucciones, que es propiedad de un Objeto o clase y realiza tareas asociadas a ese Objeto o Clase. Existen 2 tipos:
+
+Método Estático:
+Método de Instancia:
+Pasted image 20230126104029.png
+
+MODEL: Como se estructuran y que datos contiene el proyecto.
+
+MVC: (Modelo Vista Controlador) patrón de diseño de software, comúnmente utilizado para implementar interfaces de usuario, datos y lógica de control. Enfatiza una separación entre la lógica de negocios y su visualización.
+
+Las tres partes del patrón de diseño de software MVC se pueden describir de la siguiente manera:
+
+Modelo: Maneja datos y lógica de negocios.
+Vista: Se encarga del diseño y presentación.
+Controlador: Enruta comandos a los modelos y vistas.
+CORE DEL PROYECTO:
+
+COUPLING: (Acoplamiento) hacer los elementos independientes para que en caso de tener que eliminar uno de los elementos no afecte a los demás.
+
+DDD: Domain Driven Design
+
+COHESION: Cuando hay mas de un subsistema un acoplamiento muy bajo porque si hay que modificar un bloque el otor se verá afectado poco o nada o bien si se añade uno nuevo no afecte mucho a los existentes.
+
+Pasted image 20230112095811.png
+
+https://albertprofe.github.io/wiki/javase/se-concepts-coupling.html
+
+SCOPE: en programación todo el párrafo englobado entre { } corchetes
+
+DIFERENCIA ENTRE STATIC O NO STATIC:
+
+HASHMAP: designa y almacena claves únicas para los valores (en pares clave/valor), que se pueden recuperar, consultar en cualquier punto dado, utilizando la clave del elemento es un estructura de datos similar a Array, Arraylist, etc.
+
+CSS: (Cascading Style Sheets / Hojas de estilo en cascada) lenguaje de código para dar forma gráfica y estética a los objetos de la web que estamos creando en una web.
+
+PROJECT (PROYECTO): Trabajo, tarea o servicio que solventa la necesidad de un cliente o persona.
+
+UML:
+
+CODE:
+
+API REST:
+
+GESTOR DE DEPENDENCIAS:
+
+POM:
+
+DIAGRAMA FUNCIONAL:
+
+BUSINESS MODEL:
