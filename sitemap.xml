@@ -1,11 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://AlbertMBU.github.io/wiki/apuntes_helsinki/part2.html</loc>
+    <lastmod>2023-02-22T11:52:22.861Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AlbertMBU.github.io/wiki/apuntes_helsinki/part1.html</loc>
+    <lastmod>2023-02-22T11:52:26.429Z</lastmod>
+  </url>
+  <url>
     <loc>https://AlbertMBU.github.io/wiki/index.html</loc>
-    <lastmod>2023-01-20T12:47:33.928Z</lastmod>
+    <lastmod>2023-02-22T11:52:27.685Z</lastmod>
   </url>
   <url>
     <loc>https://AlbertMBU.github.io/wiki/about.html</loc>
-    <lastmod>2023-01-20T12:47:34.996Z</lastmod>
+    <lastmod>2023-02-22T11:52:29.049Z</lastmod>
   </url>
 </urlset>
