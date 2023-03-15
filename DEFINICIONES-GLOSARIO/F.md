@@ -1,0 +1,1 @@
+**FRAMEWORK**: Conjunto de herramientas orientas a ejecutar un software en concreto

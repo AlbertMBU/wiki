@@ -2,21 +2,32 @@ project:
   type: website
 
 website:
-  title: "Albert MBUA"
+  title: Abert MBUA
+  #cookie-consent:
+  #  message: "This website uses cookies to ensure you get the best experience on our website."
+  #  type: express
+  #  style: headline
+  #  palette: dark
+  
+  repo-url: https://albertmbu.github.io/wiki/
+  
+
   navbar:
     background: secondary
     style: "floating"
     search: true
+    
     right:
       - text: Home
         file: index.qmd
-      - text: About
+      - sidebar:apuntes_helsinki
+      - sidebar:definitions
+      - sidebar:DEFINCIONES-GLOSARIO
+      - text: "About"
         file: about.qmd
-      - text: Apuntes Helsinki
-        file: apuntes_helsinki/part1.qmd
-              apuntes_helsinki/part2.qmd
-      - text: Definiciones
-        file: Definitions/definitions.qmd
+
+
+
       
 
   sidebar:
@@ -27,19 +38,54 @@ website:
       background: none
       style: "floating"
       contents: 
-        - text: "---"  
+        - text: "Apuntes de la asignatura de Helsinki" 
+        - text: "---"
         - section: "Apuntes Helsinki: "
           contents: 
             - apuntes_helsinki/part1.qmd
             - apuntes_helsinki/part2.qmd
-        - text: "---"  
+        - text: "---"
+
+    - id: "DEFINCIONES-GLOSARIO"
+      title: "Definciones y Glosario"
+      contents:
+        - text: "Definiciones y Glosario"
+        - text: "---"
+        - section: "Definiciones y Glosario: "
+          contents: 
+            - A.qmd
+            - B.qmd
+            - C.qmd
+            - D.qmd
+            - E.qmd
+            - F.qmd
+            - G.qmd
+            - H.qmd
+            - I.qmd
+            - J.qmd
+            - K.qmd
+            - L.qmd
+            - M.qmd
+            - N.qmd
+            - O.qmd
+            - P.qmd
+            - Q.qmd
+            - R.qmd
+            - S.qmd
+            - T.qmd
+            - U.qmd
+            - V.qmd
+            - W.qmd
+            - X.qmd
+            - Y.qmd
+            - Z.qmd
+             
+
+   
     - id: "definitions"
       title: "Definiciones"
-      border: true
-      collapse-level: 1
-      background: none
-      style: "floating"
-      contents: 
+      contents:
+        - text: "Definiciones" 
         - text: "---"   
         - section: "Definiciones: "
           contents: 
